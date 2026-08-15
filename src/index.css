@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@theme {
+  --color-noir-bg: #050506;
+  --color-noir-card: #16171f;
+  --color-noir-elevated: #20212c;
+
+  --color-violet-dark: #6d28d9;
+  --color-violet-primary: #8b5cf6;
+  --color-violet-hover: #a78bfa;
+
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #9ca3af;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scrollbar-color: rgba(139, 92, 246, 0.9) rgba(17, 19, 26, 0.9);
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.9) rgba(17, 19, 26, 0.9);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(17, 19, 26, 0.9);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a78bfa 0%, #8b5cf6 100%);
+  border-radius: 9999px;
+  border: 2px solid rgba(17, 19, 26, 0.9);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c4b5fd 0%, #a78bfa 100%);
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
